@@ -4,10 +4,12 @@ import get_menu from "./routes/get_menu.js"
 import get_topping from "./routes/get_topping.js"
 import get_customer from "./routes/get_customer.js"
 import post_menu from "./routes/post_menu.js"
+import post_customer from "./routes/post_customer.js"
 import put_menu from "./routes/put_menu.js"
 import patch_menu from "./routes/patch_menu.js"
 import delete_menu from "./routes/delete_menu.js"
 import get_customer_by_phone from "./routes/get_customer_by_phone.js"
+import post_order from "./routes/post_order.js"
 
 
 const app =express();
@@ -22,6 +24,8 @@ app.use(patch_menu);
 app.use(delete_menu);
 app.use(get_customer_by_phone);
 app.use(get_topping);
+app.use(post_customer);
+app.use(post_order);
 
 app.listen(3000,()=>{
     console.log("Server is working at http://localhost:3000")
